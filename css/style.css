@@ -1,0 +1,75 @@
+:root {
+
+    /* Cores */
+    --cor-primaria: #1B5E20;
+    --cor-primaria-secundaria: #2E7D32;
+    --cor-verde-medio: #388E3C;
+    --cor-verde-natural: #689F38;
+    --cor-verde-claro: #8BC34A;
+
+    --cor-neutra-escura: #212121;
+    --cor-neutra-media: #616161;
+    --cor-neutra-clara: #EEEEEE;
+    --cor-fundo: #F7F9F7;
+    --cor-branca: #FFFFFF;
+
+
+    /* Tipografia */
+    --fonte-xs: 0.875rem;
+    --fonte-sm: 1rem;
+    --fonte-md: 1.25rem;
+    --fonte-lg: 1.5rem;
+    --fonte-xl: 2rem;
+
+
+    /* Espaçamento */
+    --espaco-1: 4px;
+    --espaco-2: 8px;
+    --espaco-3: 16px;
+    --espaco-4: 24px;
+    --espaco-5: 32px;
+    --espaco-6: 48px;
+
+}
+
+body {
+    margin: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-neutra-escura);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: linear-gradient(to right, var(--cor-primaria), var(--cor-neutra-escura));
+    color: var(--cor-branca);
+    padding: var(--espaco-4);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+nav a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    padding: var(--espaco-2) var(--espaco-3);
+    min-width: 120px;
+    text-align: center;
+}
+
+nav a + a {
+    border-left: 1px solid var(--cor-verde-claro);
+}
+
+h1,
+h2 {
+    font-family: Georgia, serif;
+}
+
+h1 {
+    font-size: var(--fonte-xl);
+    text-align: center;
+    margin: 0 0 var(--espaco-3);
+}
