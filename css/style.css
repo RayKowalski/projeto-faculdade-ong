@@ -34,6 +34,9 @@
 
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: var(--cor-fundo);
     color: var(--cor-neutra-escura);
     font-family: Arial, sans-serif;
@@ -72,4 +75,31 @@ h1 {
     font-size: var(--fonte-xl);
     text-align: center;
     margin: 0 0 var(--espaco-3);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espaco-5);
+    flex: 1;
+}
+
+.destaque {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaco-5);
+    align-items: center;
+}
+
+.destaque-imagem img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+}
+
+footer {
+    background: linear-gradient(to right, var(--cor-primaria), var(--cor-neutra-escura));
+    color: var(--cor-branca);
+    text-align: center;
+    padding: var(--espaco-3);
 }
