@@ -281,4 +281,52 @@ document.addEventListener("input", function (evento) {
 
 window.addEventListener("hashchange", navegar);
 
+const modalAcessibilidade = document.getElementById("modal-acessibilidade");
+const preferenciasSalvas = localStorage.getItem("tema");
+const confirmarAcessibilidade = document.getElementById("confirmar-acessibilidade");
+
+if (preferenciasSalvas) {
+    modalAcessibilidade.style.display = "none";
+}
+
+confirmarAcessibilidade.addEventListener("click", function () {
+    const temaSelecionado = document.querySelector('input[name="tema"]:checked').value;
+
+    if (temaSelecionado === "escuro") {
+        document.body.classList.add("modo-escuro");
+    }
+
+    if (temaSelecionado === "claro") {
+        document.body.classList.remove("modo-escuro");
+    }
+
+    const tonsQuentes = document.getElementById("tom-quente");
+
+if (tonsQuentes.checked) {
+    document.body.classList.add("modo-quente");
+} else {
+    document.body.classList.remove("modo-quente");
+}
+
+localStorage.setItem("tema", temaSelecionado);
+localStorage.setItem("tonsQuentes", tonsQuentes.checked);
+
+    modalAcessibilidade.style.display = "none";
+});
+
+const temaSalvo = localStorage.getItem("tema");
+const tonsQuentesSalvos = localStorage.getItem("tonsQuentes");
+
+if (temaSalvo === "escuro") {
+    document.body.classList.add("modo-escuro");
+}
+
+if (temaSalvo === "claro") {
+    document.body.classList.remove("modo-escuro");
+}
+
+if (tonsQuentesSalvos === "true") {
+    document.body.classList.add("modo-quente");
+}
+
 navegar();

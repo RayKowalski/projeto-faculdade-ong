@@ -171,6 +171,11 @@ select {
     box-sizing: border-box;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+}
+
 input:focus,
 select:focus {
     outline: none;
@@ -349,4 +354,83 @@ label {
     width: 90%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     text-align: center;
+}
+
+/* Modos de acessibilidade */
+
+body.modo-escuro {
+    background-color: #121212;
+    color: #EEEEEE;
+}
+
+body.modo-escuro main section {
+    background-color: #1E1E1E;
+    color: #EEEEEE;
+}
+
+body.modo-escuro a {
+    color: #A5D6A7;
+}
+
+body.modo-quente {
+    background-color: #FFF8E1;
+    color: #3E3424;
+}
+
+body.modo-quente main section {
+    background-color: #FFF3CD;
+    color: #3E3424;
+}
+
+body.modo-quente a {
+    color: #33691E;
+}
+
+body.modo-escuro.modo-quente {
+    background-color: #241F1A;
+    color: #F5E6CC;
+}
+
+body.modo-escuro.modo-quente main section {
+    background-color: #302820;
+    color: #F5E6CC;
+}
+
+body.modo-escuro.modo-quente a {
+    color: #C5E1A5;
+}
+
+/* Janela de preferência de acessibilidade */
+
+.modal-acessibilidade {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1000;
+}
+
+.modal-acessibilidade-conteudo {
+    width: min(90%, 420px);
+    padding: 32px;
+    background-color: var(--cor-branca);
+    color: var(--cor-neutra-escura);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal-acessibilidade-conteudo fieldset {
+    margin: 20px 0;
+    padding: 16px;
+}
+
+.modal-acessibilidade-conteudo label {
+    display: block;
+    margin: 12px 0;
+}
+
+.modal-acessibilidade-conteudo button {
+    margin-top: 16px;
 }
